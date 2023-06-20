@@ -161,9 +161,9 @@ Buka aplikasi postman dan pilih create new → HTTP Request
 ## Menampilkan Semua Data
 <p>
 Pilih method GET dan masukkan URL berikut:
-http://localhost:8080/post
-Lalu, klik Send. Jika hasil test menampilkan semua data artikel dari database, maka pengujian 
-berhasil.
+<p>http://localhost:8080/post</p>
+<p></p>Lalu, klik Send. Jika hasil test menampilkan semua data artikel dari database, maka pengujian 
+berhasil.</p>
 </p>
 
 ![Gambar 3](img/3.png)
@@ -172,9 +172,9 @@ berhasil.
 <p>
 Masih menggunakan method GET, hanya perlu menambahkan ID artikel di belakang URL 
 seperti ini:
-http://localhost:8080/post/2
-Selanjutnya, klik Send. Request tersebut akan menampilkan data artikel yang memiliki ID 
-nomor 2 di database.
+<p>http://localhost:8080/post/2</p>
+<p></p>Selanjutnya, klik Send. Request tersebut akan menampilkan data artikel yang memiliki ID 
+nomor 2 di database.</p>
 </p>
 
 ![Gambar 4](img/4.png)
@@ -184,10 +184,10 @@ nomor 2 di database.
 Untuk mengubah data, silakan ganti method menjadi PUT. Kemudian, masukkan URL artikel
 yang ingin diubah. Misalnya, ingin mengubah data artikel dengan ID nomor 2, maka masukkan 
 URL berikut:
-http://localhost:8080/post/2
-Selanjutnya, pilih tab Body. Kemudian, pilih x-www-form-uriencoded. Masukkan nama 
+<p>http://localhost:8080/post/2</p>
+<p></p>Selanjutnya, pilih tab Body. Kemudian, pilih x-www-form-uriencoded. Masukkan nama 
 atribut tabel pada kolom KEY dan nilai data yang baru pada kolom VALUE. Kalau sudah, 
-klik Send
+klik Send</p>
 </p>
  
 ![Gambar 5](img/5.png)
@@ -196,9 +196,9 @@ klik Send
 <p>
 Anda perlu menggunakan method POST untuk menambahkan data baru ke database. 
 Kemudian, masukkan URL berikut:
-http://localhost:8080/post
-Pilih tab Body, lalu pilih x-www-form-uriencoded. Masukkan atribut tabel pada 
-kolom KEY dan nilai data baru di kolom VALUE. Jangan lupa, klik Send.
+<p>http://localhost:8080/post</p>
+<p>Pilih tab Body, lalu pilih x-www-form-uriencoded. Masukkan atribut tabel pada 
+kolom KEY dan nilai data baru di kolom VALUE. Jangan lupa, klik Send.</p>
 </p>
 
 ![Gambar 6](img/6.png)
@@ -207,9 +207,9 @@ kolom KEY dan nilai data baru di kolom VALUE. Jangan lupa, klik Send.
 <p>
 Pilih method DELETE untuk menghapus data. Lalu, masukkan URL spesifik data mana yang 
 ingin di hapus. Misalnya, ingin menghapus data nomor 4, maka URL-nya seperti ini:
-http://localhost:8080/post/7
-Langsung saja klik Send, maka akan mendapatkan pesan bahwa data telah berhasil dihapus dari 
-database.
+<p>http://localhost:8080/post/7</p>
+<p>Langsung saja klik Send, maka akan mendapatkan pesan bahwa data telah berhasil dihapus dari 
+database.</p>
 </p>
 
 ![Gambar 7](img/7.png)
