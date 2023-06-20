@@ -19,8 +19,9 @@ https://www.postman.com/downloads/
 ## Membuat Model.
 Pada modul sebelumnya sudah dibuat ArtikelModel, pada modul ini kita akan memanfaatkan model
 tersebut agar dapat diakses melalui API.
+
+## Membuat REST Controller
 <p>
-Membuat REST Controller
 Pada tahap ini, kita akan membuat file REST Controller yang berisi fungsi untuk menampilkan, 
 menambah, mengubah dan menghapus data. Masuklah ke direktori app\Controllers dan buatlah file 
 baru bernama Post.php. Kemudian, salin kode di bawah ini ke dalam file tersebut:
@@ -110,19 +111,20 @@ return $this->failNotFound('Data tidak ditemukan.');
 }
 }
 }
+
 ```
 
 <p>
 Kode diatas berisi 5 method, yaitu:
-• index() – Berfungsi untuk menampilkan seluruh data pada database.
-• create() – Berfungsi untuk menambahkan data baru ke database.
-• show() – Berfungsi untuk menampilkan suatu data spesifik dari database.
-• update() – Berfungsi untuk mengubah suatu data pada database.
-• delete() – Berfungsi untuk menghapus data dari database.
+<p>• index() – Berfungsi untuk menampilkan seluruh data pada database.</p>
+<p>• create() – Berfungsi untuk menambahkan data baru ke database.</p>
+<p>• show() – Berfungsi untuk menampilkan suatu data spesifik dari database.</p>
+<p>• update() – Berfungsi untuk mengubah suatu data pada database.</p>
+<p>• delete() – Berfungsi untuk menghapus data dari database.</p>
 </p>
 
+## Membuat Routing REST API
 <p>
-Membuat Routing REST API
 Untuk mengakses REST API CodeIgniter, kita perlu mendefinisikan route-nya terlebih dulu. 
 Caranya, masuklah ke direktori app/Config dan bukalah file Routes.php. Tambahkan kode 
 di bawah ini:
@@ -144,47 +146,41 @@ php spark routes
 Selanjutnya akan muncul daftar route yang telah dibuat.
 </p>
 
-![11_Lab11Web](Gambar/105.Gambar_Upload_Gambar-1.jpg)
+![Gambar 1](img/1.png)
+Seperti yang terlihat, satu baris kode routes yang di tambahkan akan menghasilkan banyak
+Endpoint.
+Selanjutnya melakukan uji coba terhadap REST API CodeIgniter.
 
-Gambar 1. Upload Gambar
-
+## Testing REST API CodeIgniter
 <p>
-Testing REST API CodeIgniter
 Buka aplikasi postman dan pilih create new → HTTP Request
 </p>
 
-![11_Lab11Web](Gambar/107.Gambar_Tambah_artikel.jpg)
+![Gambar 2](img/2.png)
 
-
-
+## Menampilkan Semua Data
 <p>
-Menampilkan Semua Data
 Pilih method GET dan masukkan URL berikut:
 http://localhost:8080/post
 Lalu, klik Send. Jika hasil test menampilkan semua data artikel dari database, maka pengujian 
 berhasil.
-
 </p>
 
-![11_Lab11Web](Gambar/107.Gambar_Tambah_artikel-1.jpg)
+![Gambar 3](img/3.png)
 
-
-
- <p>
- Menampilkan Data Spesifik
+## Menampilkan Data Spesifik
+<p>
 Masih menggunakan method GET, hanya perlu menambahkan ID artikel di belakang URL 
 seperti ini:
 http://localhost:8080/post/2
 Selanjutnya, klik Send. Request tersebut akan menampilkan data artikel yang memiliki ID 
 nomor 2 di database.
- </p>
+</p>
 
- ![11_Lab11Web](Gambar/108.Gambar_Cari_artikel.jpg)
+![Gambar 4](img/4.png)
 
- 
- 
- <p>
- Mengubah Data
+## Mengubah Data
+<p>
 Untuk mengubah data, silakan ganti method menjadi PUT. Kemudian, masukkan URL artikel
 yang ingin diubah. Misalnya, ingin mengubah data artikel dengan ID nomor 2, maka masukkan 
 URL berikut:
@@ -192,37 +188,30 @@ http://localhost:8080/post/2
 Selanjutnya, pilih tab Body. Kemudian, pilih x-www-form-uriencoded. Masukkan nama 
 atribut tabel pada kolom KEY dan nilai data yang baru pada kolom VALUE. Kalau sudah, 
 klik Send
- </p>
+</p>
  
- ![11_Lab11Web](Gambar/109.Gambar_Tampilan_portal-berita.jpg)
-  
-  
+![Gambar 5](img/5.png)
 
+## Menambahkan Data
 <p>
-Menambahkan Data
 Anda perlu menggunakan method POST untuk menambahkan data baru ke database. 
 Kemudian, masukkan URL berikut:
 http://localhost:8080/post
 Pilih tab Body, lalu pilih x-www-form-uriencoded. Masukkan atribut tabel pada 
 kolom KEY dan nilai data baru di kolom VALUE. Jangan lupa, klik Send.
-
 </p>
 
-![11_Lab11Web](Gambar/1.JPG)
-  
-
-
+![Gambar 6](img/6.png)
+ 
+## Menghapus Data
 <p>
-Menghapus Data
 Pilih method DELETE untuk menghapus data. Lalu, masukkan URL spesifik data mana yang 
 ingin di hapus. Misalnya, ingin menghapus data nomor 4, maka URL-nya seperti ini:
 http://localhost:8080/post/7
 Langsung saja klik Send, maka akan mendapatkan pesan bahwa data telah berhasil dihapus dari 
 database.
-
 </p>
 
-![11_Lab11Web](Gambar/2.JPG)
+![Gambar 7](img/7.png)
   
-
-<p>
+## Terimakasih
